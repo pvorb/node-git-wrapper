@@ -5,7 +5,7 @@ a wrapper around the git executable
 
 ## Installation
 
-    npm install git
+    npm install git-wrapper
 
 ## API
 
