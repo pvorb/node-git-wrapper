@@ -1,8 +1,10 @@
 {
   "name": "git-wrapper",
   "description": "a wrapper around the git executable",
-  "tags": ["git"],
-  "version": "0.0.0",
+  "tags": [
+    "git"
+  ],
+  "version": "0.0.1",
   "author": "Paul Vorbach <paul@vorb.de> (http://paul.vorba.ch/)",
   "repository": {
     "type": "git",
