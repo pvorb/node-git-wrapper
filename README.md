@@ -18,11 +18,14 @@ Constructor. See [git(1)](http://git-scm.com/docs/git) for available options.
 
 ### git.exec(command [, options [, args]], callback);
 
-Executes a git command.
+Executes a git command. See [the Git Reference](http://git-scm.com/docs/) for
+available commands.
 
   * `command`   String.         Examples: `'init'`, `'log'`, `'commit'`, etc.
-  * `options`   Object.
-  * `args`      Array[String].
+  * `options`   Object.         The options for a git command. E.g.
+                                `{ f: true }` to force a command.
+  * `args`      Array[String].  The arguments for a git command. E.g. some
+                                files for `git add`.
   * `callback`  Function.       `callback(err, msg)`.
 
 ## Bugs and Issues
