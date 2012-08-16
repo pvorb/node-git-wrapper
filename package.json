@@ -1,0 +1,27 @@
+{
+  "name": "git-wrapper",
+  "description": "a wrapper around the git executable",
+  "tags": ["git"],
+  "version": "0.0.0",
+  "author": "Paul Vorbach <paul@vorb.de> (http://paul.vorba.ch/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pvorb/node-git-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pvorb/node-git-wrapper/issues"
+  },
+  "main": "./git.js",
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT license",
+      "url": "http://vorb.de/license/mit.html"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
