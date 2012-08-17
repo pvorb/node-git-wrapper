@@ -16,7 +16,7 @@ Constructor. See [git(1)](http://git-scm.com/docs/git) for available options.
   * `options` Object. Examples: `{ paginate: true }` enables pagination.
     `{ 'git-dir': '../.git' }` specifies a different `.git` directory.
 
-### git.exec(command [, options [, args]], callback);
+### git.exec(command [[, options], args], callback);
 
 Executes a git command. See [the Git Reference](http://git-scm.com/docs/) for
 available commands.
