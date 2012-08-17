@@ -12,15 +12,16 @@ var Git = module.exports = function (options) {
   this.args = Git.optionsToString(options);
 };
 
-// git.exec(command [, options [, args ]], callback)
+// git.exec(command [[, options], args ], callback)
 Git.prototype.exec = function (command, options, args, callback) {
   callback = arguments[arguments.length - 1];
 
-  if (typeof args == 'undefined') {
+  if (arguments.length == 2) {
     options = {};
     args = [];
-  } else if (typeof callback == 'undefined') {
-    args = [];
+  } else if (arguments.length == 3) {
+    args = arguments[1];
+    options = [];
   }
 
   args = args.join(' ');
