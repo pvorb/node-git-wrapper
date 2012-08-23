@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pvorb/node-git-wrapper.png)](http://travis-ci.org/pvorb/node-git-wrapper)
 git-wrapper
 ===========
 
