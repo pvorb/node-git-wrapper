@@ -23,7 +23,8 @@ available commands.
 
   * `command`   String.         Examples: `'init'`, `'log'`, `'commit'`, etc.
   * `options`   Object.         The options for a git command. E.g.
-                                `{ f: true }` to force a command.
+                                `{ f: true }` to force a command (equivalent
+                                to adding `-f` on the command line).
   * `args`      Array[String].  The arguments for a git command. E.g. some
                                 files for `git add`.
   * `callback`  Function.       `callback(err, msg)`.
