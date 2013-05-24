@@ -31,8 +31,6 @@ Git.prototype.exec = function (command, options, args, callback) {
     + args;
 
   exec(cmd, function (err, stdout, stderr) {
-    if (err)
-      console.log(err);
     callback(err, stdout);
   });
 };
