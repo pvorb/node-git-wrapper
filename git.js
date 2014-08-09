@@ -9,6 +9,9 @@ var Git = module.exports = function (options) {
   if (typeof options == 'undefined')
     options = {};
 
+  this.cwd = options.cwd || process.cwd();
+  delete options.cwd;
+
   this.args = Git.optionsToString(options);
 };
 
@@ -30,7 +33,9 @@ Git.prototype.exec = function (command, options, args, callback) {
   var cmd = this.binary + ' ' + this.args + ' ' + command + ' ' + options + ' '
     + args;
 
-  exec(cmd, function (err, stdout, stderr) {
+  exec(cmd, {
+    cwd: this.cwd
+  }, function (err, stdout, stderr) {
     callback(err, stdout);
   });
 };
