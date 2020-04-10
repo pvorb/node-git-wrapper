@@ -1,7 +1,5 @@
 // imports
-var fs = require('fs');
-var path = require('path');
-var exec = require('child_process').exec;
+var execFile = require('child_process').execFile;
 
 // Class Git
 var Git = module.exports = function (options) {
@@ -27,13 +25,9 @@ Git.prototype.exec = function (command, options, args, callback) {
     options = [];
   }
 
-  args = args.join(' ');
   options = Git.optionsToString(options)
 
-  var cmd = this.binary + ' ' + this.args + ' ' + command + ' ' + options + ' '
-    + args;
-
-  exec(cmd, {
+  execFile(this.binary, [...this.args, command, ...options, ...args], {
     cwd: this.cwd
   }, function (err, stdout, stderr) {
     callback(err, stdout);
@@ -62,5 +56,5 @@ Git.optionsToString = function (options) {
     }
   }
 
-  return args.join(' ');
+  return args
 };
