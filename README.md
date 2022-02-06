@@ -18,7 +18,7 @@ Constructor. See [git(1)](http://git-scm.com/docs/git) for available options.
 
 ### git.exec(command [[, options], args], callback);
 
-Executes a git command. See [the Git Reference](http://git-scm.com/docs/) for
+Executes a git command through `child_process.execFile` (see [documentation](https://nodejs.org/api/child_process.html#child_processexecfilefile-args-options-callback)). See [the Git Reference](http://git-scm.com/docs/) for
 available commands.
 
   * `command`   String.         Examples: `'init'`, `'log'`, `'commit'`, etc.
